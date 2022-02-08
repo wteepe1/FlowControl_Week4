@@ -61,7 +61,7 @@ fi
 ```
 
 ```
-Practice Exercise 3 (If...Else)
+Practice Exercise 1 (If...Else)
 
 (1) Start with the script you wrote above to practice math
 (2) Now add two if...else statements to check that:
@@ -119,7 +119,7 @@ done
 Let's break this down. First, we've defined a new variabled named `num`. This variable can be named anything you want. In this case, `num` will iteratively take the value of anything included in the list that follows `in`. During each iteration, the code in between `do` and `done` will be executed. In this case, we will simply print out each of the values our variable takes, one after the other. Later, we will use `for` loops that have a whole series of commands inside the loop.
 
 ```
-Practice Exercise
+Practice Exercise 2 (for loop)
 
 Write a for loop inside a script that follows these steps:
 
@@ -158,7 +158,7 @@ done
 ```
 
 ```
-Practice Exercise
+Practice Exercise 3 (for loops, command-line arguments)
 
 Write a script that's similar to the one you wrote above to add even numbers. However,
 this time your script should accept any number of integers as command-line arguments
