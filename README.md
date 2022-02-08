@@ -12,6 +12,8 @@ else
   <DO_THING_2>
 fi
 ```
+1= true
+0= false
 
 There are lots of different ways to compare values, depending on what type of values you're working with. Here is a page that lists several options: [Bash comparison operators](http://tldp.org/LDP/abs/html/comparison-ops.html). Here's one example:
 
