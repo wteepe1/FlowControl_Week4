@@ -104,3 +104,64 @@ else
     echo "greater than seven"
 fi
 ```
+
+## For Loops
+
+One of the most common reasons to write a script is to automate something that is, at a minimum, very tedious to do manually and, at worst, completely impossible otherwise. A versatile way to incorporate repitition into a script is to use a `for` loop. `for` loops in bash have the following structure:
+
+```
+for num in 1 two 3 FOUR
+do
+  echo $num
+done
+```
+
+Let's break this down. First, we've defined a new variabled named `num`. This variable can be named anything you want. In this case, `num` will iteratively take the value of anything included in the list that follows `in`. During each iteration, the code in between `do` and `done` will be executed. In this case, we will simply print out each of the values our variable takes, one after the other. Later, we will use `for` loops that have a whole series of commands inside the loop.
+
+```
+Practice Exercise
+
+Write a for loop inside a script that follows these steps:
+
+(1) Create a variable called sum and set it to 0.
+(2) Loop over the integers 1 through 10.
+(3) If the integer is even (2, 4, etc.), add it to sum.
+(4) Once the loop is complete, print out sum.
+
+HINT: Remember the modulo (%) operator!!
+```
+
+Double parentheses notation can also be used to write a `for` loop in a way that doesn't require you to write out every unique element in the list:
+
+```
+for ((num=1;num<=10;num++))
+do
+  echo $num
+done
+```
+
+When written this way, the `for` loop statement has a structure like this
+
+```
+for (( <START_VALUE> ; <STOP_CONDITION> ; <LOOP_UPDATE> ))
+```
+
+The variable is initialized to the start value, updated according to the loop update, and continues until the stop condition is no longer true. The loop update (`num++`) here adds `1` to `num` each time the loop iterates. NOTE: You _don't_ precede variables with `$` inside double parentheses.
+
+Sometimes you'll want to loop through a whole series of command-line arguments. To loop through these arguments, you can write `$@` in place of the list in your `for` statement.
+
+```
+for num in $@
+do
+  echo $num
+done
+```
+
+```
+Practice Exercise
+
+Write a script that's similar to the one you wrote above to add even numbers. However,
+this time your script should accept any number of integers as command-line arguments
+and only sum the even ones. At the end, your script should print out sum.
+```
+
